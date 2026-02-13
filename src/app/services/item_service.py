@@ -228,13 +228,13 @@ def get_item_by_id_dfs_iterative(
 
                     for task in lab.tasks:
                         counter += 1
-                        if lab.id == item_id:
+                        if task.id == item_id:
                             return FoundItem(task, counter)
 
                         for step in task.steps:
                             counter += 1
                             if step.id == item_id:
-                                return FoundItem(step, counter)
+                                return FoundItem(step, counter)#
         case PostOrder():
             # TODO implement
             pass
